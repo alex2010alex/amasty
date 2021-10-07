@@ -7,18 +7,10 @@ spl_autoload_register(function($className){
 use Chess\King;
 use Chess\Queen;
 
-//$king = new King(4, 3);
-
-//print_r($king->getPosition());
-
-//$king->move(5, 2);
-
-//print_r($king->getPosition());
-
-$king = new Queen(4, 3);
-
+$king = new King(4, 3);
+$king->move(2, 2);
 print_r($king->getPosition());
 
-$king->move(8, 3);
-
-print_r($king->getPosition());
+$queen = new Queen(1, 1);
+$queen->move(7, 3);
+print_r($queen->getPosition());

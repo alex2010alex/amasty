@@ -29,13 +29,12 @@ class Queen extends AbstractChessmen {
             $iY = $this->y; 
             $iX <= self::WIDTH && $iX > 0 && $iY <= self::HEIGHT && $iY > 0; 
             ($subX ? $iX++: $iX--), ($subY ? $iY++: $iY--)){
-            echo "<br>x = {$iX} y = {$iY}";
             if(($iY == $y && $iX == $x) || (($this->y == $y && $iX == $x) xor ($this->x == $x && $iY == $y))){
                 return true;
             }
         }
 
-        throw new \Exception("Указаны не допустимые координаты 3");
+        throw new \Exception("Указаны не допустимые координаты");
 
     }
 

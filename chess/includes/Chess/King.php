@@ -22,7 +22,7 @@ class King extends AbstractChessmen {
         $y = abs($y - $this->y);
 
         if($x > self::STEP || $y > self::STEP){
-            throw new \Exception("Указаны не допустимые координаты 2");
+            throw new \Exception("Указаны не допустимые координаты");
         }
 
         return true;
