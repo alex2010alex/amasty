@@ -68,7 +68,7 @@ Vue.createApp({
 
                             this.falseR = false;
                         }
-                        catch{
+                        catch(e){
                             this.falseR = true;
                         }
                     }
