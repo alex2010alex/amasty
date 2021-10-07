@@ -1,0 +1,52 @@
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Конвертер</title>
+    </head>
+    <body>
+        
+        <div class="converter">
+            <div class="converter__in">
+                <div class="converter__row">
+                    <div>Дата</div>
+                    <div>Валюта 1</div>
+                    <div>Валюта 2</div>
+                </div>
+                <div class="converter__row">
+                    <div>
+                        <input type="date" name="" id="" v-model="date" :max="maxDate" @input="sendRequest('convert');">
+                    </div>
+                    <div>
+                        <input type="text" @input="validateInput">
+                        <select name="" id="" v-model="from" @change="sendRequest('convert');">
+                            <option v-for="(item, indx) in getFrom" :value="item" :key="indx">{{item}}</option>
+                        </select>
+                        <span>></span>
+                    </div>
+                    <div>
+                        <select name="" id="" v-model="to" @change="sendRequest('convert');">
+                            <option v-for="(item, indx) in getTo" :value="item" :key="indx">{{item}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="converter__out">
+
+                <div v-if="endSum">
+                    {{endSum}} {{endTo}}, курс - {{endCurs}}
+                </div>
+            </div>
+
+            <div class="converter-alert" v-if="falseR">
+                Проверьте правильность введенных данных.
+            </div>
+        </div>
+        
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="js/main.js"></script>
+
+        <link rel="stylesheet" href="css/main.css">
+    </body>
+</html>

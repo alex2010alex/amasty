@@ -1,0 +1,4 @@
+a) mysqldump -u user -p passwd db > db.sql
+
+б) SELECT ROUND(SUM(`transactions`.`amount`), 2), `persons`.`fullname` FROM `transactions`, `persons` WHERE `persons`.`id` = `transactions`.`to_person_id` GROUP BY `persons`.`fullname`
+

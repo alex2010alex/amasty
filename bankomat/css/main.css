@@ -1,0 +1,40 @@
+.bankomat {
+    width: 20rem;
+    max-width: 100%;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 0 20px 20px 20px;
+}
+
+.bankomat form {
+    display: flex;
+    flex-direction: column;
+}
+
+.bankomat form label span {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.bankomat form input {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.bankomat .button, .bankomat form label {
+    margin-top: 1rem;
+}
+
+.bankomat .button input[type="submit"] {
+    float: right;
+    width: auto;
+}
+
+.bankomat__response-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.bankomat__response-item div {
+    width: 50%;
+}
